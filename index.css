@@ -1,0 +1,66 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14%;
+  }
+  
+  .main img{
+    height: 15vh;
+  }
+  
+  h1{
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  .container1 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 100%;
+  }
+  .auth {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  
+  .auth-pages {
+    padding: 3% 3% 3% 3%;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  
+  @media (max-width: 1030px) {
+    .auth {
+      display: none;
+    }
+    
+    .container1{
+      display: flex;
+    }
+  
+    .main{
+      margin-top: 7%;
+    }
+  
+    .btn1,.btn2,.btn3,.btn4{
+        padding-top: 1.5%;
+        padding-bottom: 1.5%;
+    }
+  
+    .form{
+      width: 100%;
+    }
+  
+    .auth-pages {
+      justify-content: center;
+      align-items: center;
+    }
+  }
