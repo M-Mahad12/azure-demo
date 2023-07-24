@@ -66,9 +66,9 @@ h1{
 
 /*CSS for the classes provide by the azure*/
 
-.id{
+.heading,
+.divider{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -82,7 +82,7 @@ h1{
 button{
   background-color: #FF5722;
   color: white;
-  padding: 3% 5%;
+  padding: 7px 14px;
   border-radius: 50px;
   font-size: 1rem;
   font-weight:400;
@@ -100,4 +100,29 @@ input{
   border-radius: 10px;
   border: 3px solid black;
   outline: none;
+}
+
+
+@media (max-width: 1030px) {
+  .auth {
+    display: none;
+  }
+  
+  .container1{
+    display: flex;
+  }
+
+  .main{
+    margin-top: 7%;
+  }
+
+  button{
+      padding-top: 1.5%;
+      padding-bottom: 1.5%;
+  }
+
+  .auth-pages {
+    justify-content: center;
+    align-items: center;
+  }
 }
