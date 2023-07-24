@@ -1,0 +1,76 @@
+.auth-image1 {
+    position: absolute;
+    width: 26%;
+    height: 15%;
+    top: 25%;
+    left: 38%;
+}
+  
+.auth-image2 {
+    position: absolute;
+    width: 35%;
+    height: 60%;
+    top: 35%;
+    left: 35%;
+}
+
+.auth-image2 #circle1 {
+    animation: zoomInOut1 2s alternate infinite;
+}
+  
+.auth-image2 #circle2 {
+    animation: zoomInOut2 3s alternate infinite;
+}
+  
+  @keyframes zoomInOut1 {
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+  }
+  
+  @keyframes zoomInOut2 {
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+  }
+
+  .auth-image2 rect {
+    animation: moveUpDown 2s alternate infinite;
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+svg{
+    height: 100%;
+    width: 100%;
+}
+
+.auth-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
