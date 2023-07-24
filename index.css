@@ -52,18 +52,6 @@ h1{
   left: 38%;
 }
 
-.o-input{
-  width: 100%;
-  padding: 10px;
-  margin: 1rem 0px;
-  background-color: cssvar(input-bg-color);
-  color: cssvar(input-text-color);
-  border: 3px solid cssvar(input-border-color);
-  border-radius: 10px;
-  outline: none;
-}
-
-
 /*CSS for the classes provide by the azure*/
 
 .heading,
@@ -90,7 +78,7 @@ button{
 }
 
 a{
-  text-decoration: none;
+  color: black;
 }
 
 input{
@@ -115,12 +103,6 @@ input{
   .main{
     margin-top: 7%;
   }
-
-  button{
-      padding-top: 1.5%;
-      padding-bottom: 1.5%;
-  }
-
   .auth-pages {
     justify-content: center;
     align-items: center;
