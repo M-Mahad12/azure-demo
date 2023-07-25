@@ -28,8 +28,7 @@ h2{
 
 .heading,
 .intro,
-.entry-item label,
-.entry-item a{
+.entry-item label{
   display: none;
 }
 
@@ -60,7 +59,7 @@ width: 60%
 
 a{
 color: black;
-font-size: 1.8rem;
+font-size: 1.5rem;
 }
 
 .entry{
@@ -71,7 +70,7 @@ width: 100%;
 }
 
 .entry-item{
-    margin-top: 4rem;
+  margin-top: 4rem;
   width: 100%;
 }
 
