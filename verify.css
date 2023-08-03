@@ -46,8 +46,7 @@ body{
   label,
   a,
   .heading,
-  #ReadOnlyEmail_ver_input_label,
-  #continue{
+  #ReadOnlyEmail_ver_input_label{
     display: none;
   }
 
