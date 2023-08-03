@@ -28,7 +28,9 @@ h2{
 
 .heading,
 .intro,
-.entry-item label{
+.entry-item label,
+.divider,
+.create{
   display: none;
 }
 
