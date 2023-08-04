@@ -20,22 +20,17 @@
                 }, 2000);
             }
           }
+
         
-          const observer = new MutationObserver(function() {
+        window.onload = function() {
+            setInterval(function() {
             const isEmailVerified = document.getElementById('email_success');
-            if (window.getComputedStyle(isEmailVerified).display !== 'none') {
-                clickContinueButton();
-            } 
-        });
-        
-          observer.observe(document, { childList: true, subtree: true });
-        
-          window.onload = function() {
-            const isEmailVerified = document.getElementById('email_success');
-            if (window.getComputedStyle(isEmailVerified).display !== 'none') {
+            if (isEmailVerified && window.getComputedStyle(isEmailVerified).display !== 'none') {
                 clickContinueButton();
             }
+            }, 500);
         }
+
         </script>
 </body>
 </html>
