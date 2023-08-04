@@ -12,24 +12,20 @@
         <div id="api"></div>
 
         <script>
-            // Get the elements by their IDs
             const emailSuccessDiv = document.getElementById('email_success');
+            const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
             const continueButton = document.getElementById('continue');
           
-            // Create a MutationObserver to observe changes in the "style" attribute
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
                 if (mutation.attributeName === 'style') {
-                  // Check if the "display" style attribute has changed to a new value
-                  if (emailSuccessDiv.style.display !== 'none') {
-                    // If the style has changed to a new value other than 'none', trigger a click event on the continue button
+                  if (emailSuccessDiv.style.display !== 'none' || emailSuccessDivMfa.style.display !=='none') {
                     continueButton.click();
                   }
                 }
               }
             });
           
-            // Start observing the "style" attribute of the emailSuccessDiv
             observer.observe(emailSuccessDiv, { attributes: true });
           </script>
 </body>
