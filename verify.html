@@ -12,14 +12,13 @@
         <div id="api"></div>
 
         <script>
-            const emailSuccessDiv = document.getElementById('email_success');
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
             const continueButton = document.getElementById('continue');
           
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
                 if (mutation.attributeName === 'style') {
-                  if (emailSuccessDiv.style.display !== 'none' || emailSuccessDivMfa.style.display !=='none') {
+                  if (emailSuccessDivMfa.style.display !=='none') {
                     continueButton.click();
                   }
                 }

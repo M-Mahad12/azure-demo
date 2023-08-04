@@ -48,7 +48,7 @@ body{
   .heading,
   #ReadOnlyEmail_ver_input_label,
   #continue,
-  #email_ver_but_edit{
+  #emailVerificationControl_but_change_claims{
     display: none;
   }
 
