@@ -33,7 +33,7 @@
                     setInterval(function() {
                         try {
                             const isEmailVerified = document.getElementById('email_success');
-                            if (isEmailVerified && window.getComputedStyle(isEmailVerified).display !== 'none') {
+                            if (isEmailVerified && window.getComputedStyle(isEmailVerified).display == 'none') {
                                 console.log('email_success element found and visible');
                                 clickContinueButton();
                             } else {
