@@ -17,13 +17,13 @@
             if (continueButton) {
                 setTimeout(function() {
                     continueButton.click();
-                }, 1000);
+                }, 2000);
             }
           }
         
           const observer = new MutationObserver(function() {
             const isEmailVerified = document.getElementById('email_success');
-            if (window.getComputedStyle(isEmailVerified).display == 'inline') {
+            if (window.getComputedStyle(isEmailVerified).display !== 'none') {
                 clickContinueButton();
             } 
         });
@@ -32,7 +32,7 @@
         
           window.onload = function() {
             const isEmailVerified = document.getElementById('email_success');
-            if (window.getComputedStyle(isEmailVerified).display == 'inline') {
+            if (window.getComputedStyle(isEmailVerified).display !== 'none') {
                 clickContinueButton();
             }
         }
