@@ -13,28 +13,41 @@
 
         <script>
             function clickContinueButton() {
-            const continueButton = document.getElementById('continue');
-            if (continueButton) {
-                console.log('Button found');
-                setTimeout(function() {
-                    continueButton.click();
-                }, 3000);
+                try {
+                    const continueButton = document.getElementById('continue');
+                    if (continueButton) {
+                        console.log('Button found');
+                        setTimeout(function() {
+                            continueButton.click();
+                        }, 3000);
+                    } else {
+                        console.log('Button Not found');
+                    }
+                } catch (error) {
+                    console.error('Error in clickContinueButton:', error);
+                }
             }
-            else{
-                console.log('Button Not found');
-            }
-          }
-
         
-        window.onload = function() {
-            setInterval(function() {
-            const isEmailVerified = document.getElementById('email_success');
-            if (window.getComputedStyle(isEmailVerified).display !== 'none') {
-                clickContinueButton();
-            }
-            }, 500);
-        }
-
+            window.onload = function() {
+                try {
+                    setInterval(function() {
+                        try {
+                            const isEmailVerified = document.getElementById('email_success');
+                            if (isEmailVerified && window.getComputedStyle(isEmailVerified).display !== 'none') {
+                                console.log('email_success element found and visible');
+                                clickContinueButton();
+                            } else {
+                                console.log('email_success element not found or not visible');
+                            }
+                        } catch (error) {
+                            console.error('Error in setInterval callback:', error);
+                        }
+                    }, 500);
+                } catch (error) {
+                    console.error('Error in window.onload:', error);
+                }
+            };
         </script>
+        
 </body>
 </html>
