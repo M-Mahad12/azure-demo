@@ -12,42 +12,25 @@
         <div id="api"></div>
 
         <script>
-            function clickContinueButton() {
-                try {
-                    const continueButton = document.getElementById('continue');
-                    if (continueButton) {
-                        console.log('Button found');
-                        setTimeout(function() {
-                            continueButton.click();
-                        }, 3000);
-                    } else {
-                        console.log('Button Not found');
-                    }
-                } catch (error) {
-                    console.error('Error in clickContinueButton:', error);
+            // Get the elements by their IDs
+            const emailSuccessDiv = document.getElementById('email_success');
+            const continueButton = document.getElementById('continue');
+          
+            // Create a MutationObserver to observe changes in the "style" attribute
+            const observer = new MutationObserver((mutationsList) => {
+              for (const mutation of mutationsList) {
+                if (mutation.attributeName === 'style') {
+                  // Check if the "display" style attribute has changed to a new value
+                  if (emailSuccessDiv.style.display !== 'none') {
+                    // If the style has changed to a new value other than 'none', trigger a click event on the continue button
+                    continueButton.click();
+                  }
                 }
-            }
-        
-            window.onload = function() {
-                try {
-                    setInterval(function() {
-                        try {
-                            const isEmailVerified = document.getElementById('email_success');
-                            if (isEmailVerified && window.getComputedStyle(isEmailVerified).display == 'none') {
-                                console.log('email_success element found and visible');
-                                clickContinueButton();
-                            } else {
-                                console.log('email_success element not found or not visible');
-                            }
-                        } catch (error) {
-                            console.error('Error in setInterval callback:', error);
-                        }
-                    }, 500);
-                } catch (error) {
-                    console.error('Error in window.onload:', error);
-                }
-            };
-        </script>
-        
+              }
+            });
+          
+            // Start observing the "style" attribute of the emailSuccessDiv
+            observer.observe(emailSuccessDiv, { attributes: true });
+          </script>
 </body>
 </html>
