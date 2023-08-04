@@ -10,7 +10,8 @@
             <img src="https://m-mahad12.github.io/azure-demo/twelogo.png">
         </div>
         <div id="api"></div>
-
+        <div class="cancel-div"><button class="cancel-btn" onclick="redirectToPage()">Cancel</button></div>
+    </div>
         <script>
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
             const continueButton = document.getElementById('continue');
@@ -25,6 +26,11 @@
 
             const config = { attributes: true, attributeFilter: ['aria-label'] };
             observer.observe(emailSuccessDivMfa, config);
+
+            function redirectToPage() {
+                window.history.back();
+            }
+
           </script>
 </body>
 </html>
