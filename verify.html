@@ -15,9 +15,13 @@
             function clickContinueButton() {
             const continueButton = document.getElementById('continue');
             if (continueButton) {
+                console.log('Button found');
                 setTimeout(function() {
                     continueButton.click();
-                }, 2000);
+                }, 3000);
+            }
+            else{
+                console.log('Button Not found');
             }
           }
 
@@ -25,7 +29,7 @@
         window.onload = function() {
             setInterval(function() {
             const isEmailVerified = document.getElementById('email_success');
-            if (isEmailVerified && window.getComputedStyle(isEmailVerified).display !== 'none') {
+            if (window.getComputedStyle(isEmailVerified).display !== 'none') {
                 clickContinueButton();
             }
             }, 500);

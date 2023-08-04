@@ -47,7 +47,8 @@ body{
   a,
   .heading,
   #ReadOnlyEmail_ver_input_label,
-  #continue{
+  #continue,
+  #email_ver_but_edit{
     display: none;
   }
 
