@@ -49,7 +49,7 @@ body{
   #ReadOnlyEmail_ver_input_label,
   #continue,
   #emailVerificationControl_but_change_claims{
-    display: none;
+    display: none !important;
   }
 
   button {
