@@ -46,7 +46,8 @@ body{
   #continue,
   #emailVerificationControl_but_change_claims,
   #cancel,
-  #simplemodal-overlay{
+  #simplemodal-overlay,
+  #verifying_blurb{
     display: none !important;
   }
 
