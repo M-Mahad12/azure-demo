@@ -45,7 +45,8 @@ body{
   #ReadOnlyEmail_ver_input_label,
   #continue,
   #emailVerificationControl_but_change_claims,
-  #cancel{
+  #cancel,
+  #simplemodal-overlay{
     display: none !important;
   }
 
