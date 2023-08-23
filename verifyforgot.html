@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Azure AD B2C Page</title>
+    <link rel="stylesheet" type="text/css" data-preload="true" href="https://m-mahad12.github.io/azure-demo/verifyforgot.css">
+</head>
+<body>
+    <div class="container1">
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <img src="https://m-mahad12.github.io/azure-demo/twelogo.png">
+        </div>
+        <div id="api"></div>
+        <div class="cancel-div"><button class="cancel-btn" onclick="redirectToPage()">Cancel</button></div>
+    </div>
+        <script>
+            const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
+            const continueButton = document.getElementById('continue');
+          
+            const observer = new MutationObserver((mutationsList) => {
+              for (const mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.') {
+                    continueButton.click();
+                  }
+                }
+            });
+
+            const config = { attributes: true, attributeFilter: ['aria-label'] };
+            observer.observe(emailSuccessDivMfa, config);
+
+            function redirectToPage() {
+                window.history.back();
+            }
+
+          </script>
+</body>
+</html>

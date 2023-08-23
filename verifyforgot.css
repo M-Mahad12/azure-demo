@@ -1,0 +1,118 @@
+body{
+    padding: 15% 2% 5% 2%;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  img{
+    width: 70%;
+  }
+
+  /*CSS for the classes provided by the Azure*/
+
+
+  li{
+    list-style: none;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  p{
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .verificationInfoText{
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .attr{
+    width: 80%;
+  }
+
+  label,
+  a,
+  .heading,
+  #ReadOnlyEmail_ver_input_label,
+  #continue,
+  #emailVerificationControl_but_change_claims,
+  #cancel,
+  #simplemodal-overlay,
+  #verifying_blurb{
+    display: none !important;
+  }
+
+  div{
+    font-size: 2rem;
+  }
+
+  button{
+    background-color: rgb(237, 235, 235);
+    color: black;
+    padding: 9%;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    font-weight: bolder;
+    width: 100%;
+    }
+
+    .buttons{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 3rem;
+    }
+
+    .cancel-btn{
+      width: 80%;
+      padding: 6.5%;
+    }
+
+    .cancel-div{
+      display: flex;
+      justify-content: center;
+    }
+
+    input{
+      width: 90%;
+      padding: 6% 0% 6% 8%; 
+      margin: 1rem 0px; 
+      border-radius: 10px;
+      border: 3px solid black;
+      outline: none;
+      font-size: 3rem;
+      }
+
+
+
+#id{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  form{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.intro{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
