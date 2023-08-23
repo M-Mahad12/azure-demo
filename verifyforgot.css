@@ -44,11 +44,10 @@ body{
   .heading,
   #ReadOnlyEmail_ver_input_label,
   #continue,
-  #emailVerificationControl_but_change_claims,
+  #emailVerificationControl-Forgot_but_change_claims,
   #cancel,
   #simplemodal-overlay,
-  #verifying_blurb,
-  #changeClaims{
+  #verifying_blurb{
     display: none !important;
   }
 
