@@ -16,7 +16,7 @@
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl-Forgot_success_message');
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementsByClassName('cancel-btn');
-
+            cancelbtn.disabled = true;
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
                 if (mutation.type === 'attributes' && mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.') {
