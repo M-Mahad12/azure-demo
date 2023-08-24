@@ -20,8 +20,8 @@
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
                 if (mutation.type === 'attributes' && mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.') {
-                    continueButton.click();
                     cancelbtn.disabled = true;
+                    // continueButton.click();
                   }
                 }
             });
