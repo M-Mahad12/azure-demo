@@ -1,0 +1,93 @@
+body{
+  padding: 30% 10% 10% 10%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 70%;
+}
+
+h1{
+  font-size: 3rem;
+  text-align: center; /* Center the text */
+}
+
+h2{
+  font-size: 2rem; /* Adjust the font size to fit within the container */
+  text-align: center; /* Center the text */
+}
+
+/*CSS for the classes provided by the Azure*/
+
+
+.heading,
+.intro,
+.entry-item label,
+.divider,
+.create,
+#forgotPassword{
+  display: none;
+}
+
+form{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.password-label a{
+  margin-left: 71%;
+}
+
+button{
+background-color: rgb(237, 235, 235);
+color: black;
+padding: 4% 10%; 
+border-radius: 10px;
+font-size: 1.5rem;
+font-weight: bolder;
+width: 60%
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+a{
+color: black;
+font-size: 1.5rem;
+}
+
+.entry{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+}
+
+.entry-item{
+  margin-top: 4rem;
+  width: 100%;
+}
+
+input{
+width: 100%;
+padding: 5% 0% 5% 2%; 
+margin: 2rem 0px; 
+border-radius: 10px;
+border: 3px solid black;
+outline: none;
+font-size: 1.5rem;
+}
+
+label{
+  font-size: 2rem;
+  text-align: center;
+}
