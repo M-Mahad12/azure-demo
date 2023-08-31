@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Azure AD B2C Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" data-preload="true" href="https://m-mahad12.github.io/azure-demo/verify.css">
 </head>
 <body>
@@ -16,7 +18,7 @@
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
-            const langAttribute = document.documentElement.getAttribute('lang');
+            const langAttribute = document.documentElement.lang;
 
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {

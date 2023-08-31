@@ -1,5 +1,6 @@
 body{
   padding: 30% 10% 10% 10%;
+  font-family: 'Lato';
 }
 
 .container {
@@ -83,7 +84,7 @@ margin: 2rem 0px;
 border-radius: 10px;
 border: 3px solid black;
 outline: none;
-font-size: 1.5rem;
+font-size: 3rem;
 }
 
 label{
