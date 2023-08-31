@@ -16,6 +16,7 @@
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
+            const langAttribute = document.documentElement.getAttribute('lang');
 
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
@@ -34,7 +35,6 @@
             }
             
             function checklang(){
-                const langAttribute = document.documentElement.getAttribute('lang');
                 if(langAttribute === 'zh-Hans'){
                     cancelbtn.textContent = '取消';
                 }
