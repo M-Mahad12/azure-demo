@@ -43,7 +43,7 @@ justify-content: center;
 }
 
 .password-label a{
-  margin-left: 71%;
+  margin-left: 55%;
 }
 
 button{
@@ -51,18 +51,19 @@ background-color: rgb(237, 235, 235);
 color: black;
 padding: 4% 10%; 
 border-radius: 10px;
-font-size: 1rem;
+font-size: 1.4rem;
 font-weight: bolder;
 width: 60%
 }
 .buttons{
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 a{
 color: black;
-font-size: 1rem;
+font-size: 0.891rem;
 }
 
 .entry{
@@ -73,18 +74,18 @@ width: 100%;
 }
 
 .entry-item{
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
 }
 
 input{
 width: 100%;
 padding: 5% 0% 5% 2%; 
-margin: 2rem 0px; 
+margin: 1rem 0px; 
 border-radius: 10px;
 border: 3px solid black;
 outline: none;
-font-size: 1rem;
+font-size: 1.3rem;
 }
 
 label{
