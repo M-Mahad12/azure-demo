@@ -32,6 +32,15 @@
             function redirectToPage() {
                 window.history.back();
             }
+            
+            function checklang(){
+                const langAttribute = document.documentElement.getAttribute('lang');
+                if(langAttribute === 'zh-hans'){
+                    cancelbtn.textContent = '取消';
+                }
+            }
+
+            window.onload = checklang;
 
           </script>
 </body>
