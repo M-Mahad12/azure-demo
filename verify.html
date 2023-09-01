@@ -29,11 +29,11 @@
                 }
             });
 
-            const observer1 = new MutationObserver(mutationsList => {
-                console.log("Mutation detected:", mutation); 
-            for(let mutation of mutationsList) {
+            const observer1 = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
                 if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
-                    var langValue = htmlElement.getAttribute('lang');
+                    console.log("Mutation detected:", mutation); 
+                    const langValue = htmlElement.getAttribute('lang');
                     if (langValue === 'zh-Hans') {
                         cancelbtn.textContent = '取消'; 
                     }
