@@ -54,7 +54,8 @@ padding: 4% 10%;
 border-radius: 10px;
 font-size: 1rem;
 font-weight: bolder;
-width: 60%
+width: 60%;
+font-family: 'Lato';
 }
 .buttons{
   display: flex;
@@ -86,6 +87,7 @@ border-radius: 10px;
 border: 3px solid black;
 outline: none;
 font-size: 1rem;
+font-family: 'Lato';
 }
 
 label{
