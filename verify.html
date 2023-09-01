@@ -18,11 +18,10 @@
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
-            const langAttribute = document.documentElement.lang;
 
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
-                if (mutation.type === 'attributes' && mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.') {
+                if (mutation.type === 'attributes' && mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.' || mutation.target.getAttribute('aria-label') === '电子邮件地址已验证。您现在可以继续') {
                     cancelbtn.disabled = true;
                     continueButton.click();
                   }
@@ -36,14 +35,12 @@
                 window.history.back();
             }
             
-            function checklang(){
-                if(langAttribute === 'zh-Hans'){
-                    cancelbtn.textContent = '取消';
-                }
+            window.addEventListener('DOMContentLoaded', function() {
+            var langValue = document.documentElement.getAttribute('lang');
+            if (langValue === 'zh-Hans') {
+                cancelbtn.textContent = '取消'; 
             }
-
-            window.onload = checklang;
-
+        });
           </script>
 </body>
 </html>
