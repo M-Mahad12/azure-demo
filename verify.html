@@ -19,7 +19,7 @@
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
             const htmlElement = document.documentElement;
-            const labelp = document.querySelector('p');
+            const introDiv = document.querySelector('.intro');
 
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
@@ -30,28 +30,25 @@
                 }
             });
 
-            if(labelp.textContent.includes('请提供以下详细信息。')){
-                console.log('change occurs');
-                cancelbtn.textContent = '取消';
+            const pTagObserver = new MutationObserver(mutationsList => {
+            for (const mutation of mutationsList) {
+                if (mutation.type === 'childList') {
+                    const pElement = introDiv.querySelector('p');
+                    if (pElement && pElement.textContent.trim() === '请提供以下详细信息。') {
+                        console.log("Text detected:", pElement.textContent); 
+                        cancelbtn.textContent = '取消';
+                    }
+                    else{
+                        console.log('not detected');
+                    }
+                }
+                else{
+                    console.log('not detected firs');
+                }
             }
-            else{
-                console.log(labelp.textContent);
-                console.log('not changed');
-            }
+        });
 
-        //     const observer1 = new MutationObserver((mutationsList) => {
-        //     for (const mutation of mutationsList) {
-        //         if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
-        //             console.log("Mutation detected:", mutation); 
-        //             const langValue = htmlElement.getAttribute('lang');
-        //             if (langValue === 'zh-Hans') {
-        //                 cancelbtn.textContent = '取消'; 
-        //             }
-        //         }
-        //     }
-        // });
-            
-            observer1.observe(htmlElement, { attributes: true, attributeFilter: ['lang'] });
+        pTagObserver.observe(introDiv, { childList: true, subtree: true });
             const config = { attributes: true, attributeFilter: ['aria-label'] };
             observer.observe(emailSuccessDivMfa, config);
 
