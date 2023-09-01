@@ -29,17 +29,17 @@
                 }
             });
 
-            const observer1 = new MutationObserver((mutationsList) => {
-            for (const mutation of mutationsList) {
-                if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
-                    console.log("Mutation detected:", mutation); 
-                    const langValue = htmlElement.getAttribute('lang');
-                    if (langValue === 'zh-Hans') {
-                        cancelbtn.textContent = '取消'; 
-                    }
-                }
-            }
-        });
+        //     const observer1 = new MutationObserver((mutationsList) => {
+        //     for (const mutation of mutationsList) {
+        //         if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+        //             console.log("Mutation detected:", mutation); 
+        //             const langValue = htmlElement.getAttribute('lang');
+        //             if (langValue === 'zh-Hans') {
+        //                 cancelbtn.textContent = '取消'; 
+        //             }
+        //         }
+        //     }
+        // });
             
             observer1.observe(htmlElement, { attributes: true, attributeFilter: ['lang'] });
             const config = { attributes: true, attributeFilter: ['aria-label'] };
