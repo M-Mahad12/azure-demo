@@ -18,9 +18,15 @@
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
-            const htmlElement = document.documentElement;
             const introDiv = document.querySelector('.intro');
-
+            console.log("introDiv:", introDiv);
+            const pElement = introDiv.querySelector('p');
+            console.log("ptag:", pElement);
+            if (pElement && pElement.textContent.trim() === '请提供以下详细信息。') {
+                console.log("Text already present:", pElement.textContent); 
+                cancelbtn.textContent = '取消';
+            }
+            
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
                 if (mutation.type === 'attributes' && mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.' || mutation.target.getAttribute('aria-label') === '电子邮件地址已验证。您现在可以继续') {
@@ -48,7 +54,7 @@
             }
         });
 
-        pTagObserver.observe(introDiv, { childList: true, subtree: true });
+            pTagObserver.observe(introDiv, { childList: true, subtree: true });
             const config = { attributes: true, attributeFilter: ['aria-label'] };
             observer.observe(emailSuccessDivMfa, config);
 
