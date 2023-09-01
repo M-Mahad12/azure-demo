@@ -18,7 +18,8 @@
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl-Forgot_success_message');
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
-
+            const sendverification = document.getElementById('emailVerificationControl-Forgot_but_send_code');
+            sendverification.textContent = 'Send Verification Code';
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
                 if (mutation.type === 'attributes' && mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.') {
