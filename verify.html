@@ -18,6 +18,7 @@
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
+            const htmlElement = document.documentElement;
 
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
@@ -28,6 +29,18 @@
                 }
             });
 
+            const observer1 = new MutationObserver(mutationsList => {
+            for(let mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+                    var langValue = htmlElement.getAttribute('lang');
+                    if (langValue === 'zh-Hans') {
+                        cancelbtn.textContent = '取消'; 
+                    }
+                }
+            }
+        });
+            
+            observer1.observe(htmlElement, { attributes: true, attributeFilter: ['lang'] });
             const config = { attributes: true, attributeFilter: ['aria-label'] };
             observer.observe(emailSuccessDivMfa, config);
 
@@ -35,12 +48,6 @@
                 window.history.back();
             }
             
-            window.addEventListener('DOMContentLoaded', function() {
-            var langValue = document.documentElement.getAttribute('lang');
-            if (langValue === 'zh-Hans') {
-                cancelbtn.textContent = '取消'; 
-            }
-        });
           </script>
 </body>
 </html>
