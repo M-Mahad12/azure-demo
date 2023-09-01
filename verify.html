@@ -26,7 +26,7 @@
                 console.log("Text already present:", pElement.textContent); 
                 cancelbtn.textContent = '取消';
             }
-            
+
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
                 if (mutation.type === 'attributes' && mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.' || mutation.target.getAttribute('aria-label') === '电子邮件地址已验证。您现在可以继续') {
@@ -36,25 +36,7 @@
                 }
             });
 
-            const pTagObserver = new MutationObserver(mutationsList => {
-            for (const mutation of mutationsList) {
-                if (mutation.type === 'childList') {
-                    const pElement = introDiv.querySelector('p');
-                    if (pElement && pElement.textContent.trim() === '请提供以下详细信息。') {
-                        console.log("Text detected:", pElement.textContent); 
-                        cancelbtn.textContent = '取消';
-                    }
-                    else{
-                        console.log('not detected');
-                    }
-                }
-                else{
-                    console.log('not detected firs');
-                }
-            }
-        });
-
-            pTagObserver.observe(introDiv, { childList: true, subtree: true });
+    
             const config = { attributes: true, attributeFilter: ['aria-label'] };
             observer.observe(emailSuccessDivMfa, config);
 
