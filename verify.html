@@ -19,9 +19,7 @@
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
             const introDiv = document.querySelector('.intro');
-            console.log("introDiv:", introDiv);
             const pElement = introDiv.querySelector('p');
-            console.log("ptag:", pElement);
             if (pElement && pElement.textContent.trim() === '请提供以下详细信息。') {
                 console.log("Text already present:", pElement.textContent); 
                 cancelbtn.textContent = '取消';
