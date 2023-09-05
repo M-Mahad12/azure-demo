@@ -17,17 +17,11 @@
         <script>
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl-Forgot_success_message');
             const continueButton = document.getElementById('continue');
-            
-            //Elements for changing into the chinese
             const cancelbtn = document.getElementById('cancel-val');
             const sendverification = document.getElementById('emailVerificationControl-Forgot_but_send_code');
-            const introDiv = document.querySelector('.intro');
-            const pElement = introDiv.querySelector('p');
-            const error1 = document.querySelector('.error.itemLevel.show');
+            const htmlElement = document.querySelector('html');
 
-
-            if (pElement && pElement.textContent.trim() === '请提供以下详细信息。') {
-                console.log("Text already present:", pElement.textContent); 
+            if (htmlElement && htmlElement.getAttribute('lang') === 'zh-Hans') {
                 cancelbtn.textContent = '取消';
             }
             else{
@@ -37,7 +31,7 @@
 
             const observer = new MutationObserver((mutationsList) => {
               for (const mutation of mutationsList) {
-                if (mutation.type === 'attributes' && (mutation.target.getAttribute('aria-label') === 'The code has been verified. You can now continue.' || mutation.target.getAttribute('aria-label') === '电子邮件地址已验证。您现在可以继续')) {
+                if (mutation.type === 'attributes' && (mutation.target.getAttribute('aria-label') === 'Email address has been verified. You may now continue.' || mutation.target.getAttribute('aria-label') === '电子邮件地址已验证。您现在可以继续')) {
                     cancelbtn.disabled = true;
                     continueButton.click();
                   }
