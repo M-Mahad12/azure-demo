@@ -15,7 +15,15 @@
     </div>
     <script>
         const inputfieldemail = document.getElementById('signInName');
-        inputfieldemail.placeholder = "Email Address";
-      </script>
+        const htmlElement = document.querySelector('html');
+
+        if (htmlElement && htmlElement.getAttribute('lang') === 'zh-Hans') {
+            inputfieldemail.placeholder = "电子邮件地址";
+        }
+        else{
+            inputfieldemail.textContent = 'Email Address';
+        }
+
+    </script>
 </body>
 </html>
