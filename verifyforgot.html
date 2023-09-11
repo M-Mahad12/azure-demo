@@ -44,7 +44,7 @@
             for(let mutation of mutationsList) {
                 if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
                     const displayStyle = window.getComputedStyle(error_div).getPropertyValue('display');
-                    if (displayStyle === 'block') {
+                    if (displayStyle === 'inline;') {
                         console.log('Yes');
                         error_div.textContent = '验证控制的主张尚未得到验证。';
                     }
