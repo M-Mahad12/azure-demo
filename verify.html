@@ -16,14 +16,12 @@
     </div>
         <script>
             const emailSuccessDivMfa = document.getElementById('emailVerificationControl_success_message');
-            const error_div = document.getElementById('emailVerificationControl-Forgot_error_message');
             const continueButton = document.getElementById('continue');
             const cancelbtn = document.getElementById('cancel-val');
             const htmlElement = document.querySelector('html');
 
             if (htmlElement && htmlElement.getAttribute('lang') === 'zh-Hans') {
                 cancelbtn.textContent = '取消';
-                error_div.textContent = '验证控制的主张尚未得到验证。'
             }
 
             const observer = new MutationObserver((mutationsList) => {
