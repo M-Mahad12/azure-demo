@@ -1,0 +1,97 @@
+body{
+    padding: 0% 10% 10% 10%;
+    font-family: 'Lato';
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  img{
+    width: 20%;
+  }
+  
+  .heading,
+  .intro,
+  .divider,
+  .create,
+  a,
+  #cancel,
+  #verifying_blurb{
+    display: none;
+  }
+
+  #claimVerificationServerError,
+  #passwordEntryMismatch,
+  #requiredFieldMissing{
+      width: 30%;
+  }
+  form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .password-label a{
+    margin-left: 44%;
+  }
+  
+  button{
+  background-color: rgb(237, 235, 235);
+  color: black;
+  padding: 3% 0%; 
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 40%;
+  font-family: 'Lato';
+  margin-bottom: 1rem;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-top: 1rem;
+  }
+  
+  .entry{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  }
+  
+  .entry-item{
+    width: 90%;
+  }
+  
+  input{
+  width: 100%;
+  padding: 5% 0% 5% 2%; 
+  margin: 1rem 0px; 
+  border-radius: 10px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 1rem;
+  font-family: 'Lato';
+  }
+
+  .attr{
+    width: 30%;
+  }
+  
+  label{
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }

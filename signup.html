@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Azure AD B2C Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" data-preload="true" href="https://m-mahad12.github.io/azure-demo/signup.css">
+</head>
+<body>
+    <div class="container1">
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-bottom: 1rem;">
+            <img src="hhttps://m-mahad12.github.io/azure-demo/twelogo.png">
+        </div>
+        <div id="api"></div>
+    </div>
+</body>
+<script>
+    const yesRadioButton = document.getElementById("displayName_true");
+    const noRadioButton = document.getElementById("displayName_false");
+
+    if (yesRadioButton) {
+      yesRadioButton.checked = true;
+      console.log('true');
+    }
+
+    // Hide the "No" radio button and its associated label
+    if (noRadioButton) {
+      noRadioButton.style.display = "none";
+      console.log('No');
+
+      const noLabel = document.querySelector("label[for='displayName_false']");
+      if (noLabel) {
+        noLabel.style.display = "none";
+        console.log('No_label');
+      }
+    }
+
+</script>
+</html>
