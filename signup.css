@@ -95,3 +95,8 @@ body{
     list-style-type: none;
     padding: 0;
   }
+
+  .RadioSingleSelect .attrEntry input[type="checkbox"]:checked:disabled {
+    background-color: black; /* Set the background color to black */
+    border-color: black; /* Optional: Adjust the border color to match */
+}
