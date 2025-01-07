@@ -8,31 +8,30 @@
 <body>
     <div class="container1">
         <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-bottom: 1rem;">
-            <img src="hhttps://m-mahad12.github.io/azure-demo/twelogo.png">
+            <img src="https://m-mahad12.github.io/azure-demo/twelogo.png">
         </div>
         <div id="api"></div>
     </div>
 </body>
 <script>
-    const yesRadioButton = document.getElementById("displayName_true");
-    const noRadioButton = document.getElementById("displayName_false");
-
-    if (yesRadioButton) {
-      yesRadioButton.checked = true;
-      console.log('true');
-    }
-
-    // Hide the "No" radio button and its associated label
-    if (noRadioButton) {
-      noRadioButton.style.display = "none";
-      console.log('No');
-
-      const noLabel = document.querySelector("label[for='displayName_false']");
-      if (noLabel) {
-        noLabel.style.display = "none";
-        console.log('No_label');
+          // Access the `attrEntry` class inside `RadioSingleSelect`
+      const attrEntry = document.querySelector('.RadioSingleSelect .attrEntry');
+      if (attrEntry) {
+          attrEntry.style.display = 'flex';
+          attrEntry.style.justifyContent = 'start';
+          attrEntry.style.alignItems = 'center';
       }
-    }
+
+      // Hide the label with id `extension_SuperUser_label`
+      const superUserLabel = document.getElementById('extension_SuperUser_label');
+      if (superUserLabel) {
+          superUserLabel.style.display = 'none';
+      }
+      const superUserCheckbox = document.getElementById('extension_SuperUser_true');
+      if (superUserCheckbox) {
+        superUserCheckbox.checked = true;
+      }
+
 
 </script>
 </html>
